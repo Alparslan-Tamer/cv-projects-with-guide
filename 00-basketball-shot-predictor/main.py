@@ -1,11 +1,10 @@
 import cv2
-from cv2 import sqrt
 import cvzone
 from cvzone.ColorModule import ColorFinder
 import numpy as np
 
 # Initialize the Video
-cap = cv2.VideoCapture("00-basketball-shot-predictor/Videos/vid (4).mp4")
+cap = cv2.VideoCapture("00-basketball-shot-predictor/Videos/1.mp4")
 
 # Create the color finder object
 my_color_finder = ColorFinder(False)
@@ -70,7 +69,8 @@ while True:
             cvzone.putTextRect(img_contours, "No Basket.", (50, 150), scale=5, thickness=5, colorR=(0, 0, 200), offset=20)
 
     # Dİsplay
-    img_color = cv2.resize(img_contours, (0, 0), None, 0.7, 0.7)
+    img_contours = cv2.resize(img_contours, (0, 0), None, 0.7, 0.7)
+    
     #cv2.imshow("Image", img)
     cv2.imshow("Image color", img_contours)
     

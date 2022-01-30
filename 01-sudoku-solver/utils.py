@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 
 #### READ THE MODEL WEIGHTS
 def intializePredectionModel():
-    model = load_model('01-sudoku-solver/Resources/myModel.h5')
+    model = load_model('Resources/myModel.h5')
     return model
 
 
